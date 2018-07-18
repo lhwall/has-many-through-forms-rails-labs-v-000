@@ -14,7 +14,7 @@ end
 
 def unique_users
    users_array = []
-  self.comment.each do |comment|
+  self.comments.each do |comment|
     users_array << comment.user
   end
   users_array.uniq
