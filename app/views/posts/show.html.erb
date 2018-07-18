@@ -22,3 +22,9 @@ Post: <%=f.text_field :post_id, :value=> params[:id]%>
 <%@post.comments.each do |comment| %>
 <%=comment.user.username%> says: <%=comment.content%>
 <%end%>
+<br>
+<br>
+Commenters:
+<%@post.comments.user.uniq.each do |user|%>
+<%= link_to user.name, user_path(user) %>
+<%end%>
