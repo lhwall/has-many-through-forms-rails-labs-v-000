@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
 
   def commented_posts
     commented_on_posts = []
-    self.comment.each do |comment|
+    self.comments.each do |comment|
       commented_on_posts << comment
     end
     commented_on_posts.uniq
