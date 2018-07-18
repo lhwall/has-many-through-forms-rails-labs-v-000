@@ -2,12 +2,12 @@ class User < ActiveRecord::Base
   has_many :comments
   has_many :posts, through: :comments
 
-  def commented_posts 
+  def commented_posts
     commented_on_posts = []
     self.comment.each do |comment|
-      commented_on_posts << comment 
-    end 
-    commented_on_posts.uniq 
-  end 
-  
+      commented_on_posts << comment
+    end
+    commented_on_posts.uniq
+  end
+
 end
