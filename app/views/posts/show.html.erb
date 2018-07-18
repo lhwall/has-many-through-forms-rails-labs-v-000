@@ -26,6 +26,6 @@ Post: <%=f.text_field :post_id, :value=> params[:id]%>
 <br>
 Commenters:
 <%binding.pry%>
-<%@post.comments.user.uniq.each do |user|%>
+<%@post.unique_users.each do |user|%>
 <%= link_to user.name, user_path(user) %>
 <%end%>
